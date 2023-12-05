@@ -1,0 +1,112 @@
+{
+	"Basic Next Page": {
+		"scope": "javascriptreact,typescriptreact",
+		"prefix": "nextpage",
+		"body": [
+		  "const ${TM_DIRECTORY/^.+\\/(.*)$/$1/} = () => {",
+		  "  return (",
+		  "    <div>",
+		  "      ",
+		  "    </div>",
+		  "  )",
+		  "}",
+		  "",
+		  "export default ${TM_DIRECTORY/^.+\\/(.*)$/$1/};"
+		],
+    "description": "Basic Next Page - version for Mac and Linux"
+	},
+	"Basic Next Page Windows": {
+		"scope": "javascriptreact,typescriptreact",
+		"prefix": "nextpagewin",
+		"body": [
+		  "const ${TM_DIRECTORY/^.+[\\/\\\\]+(.*)$/$1/} = () => {",
+		  "  return (",
+		  "    <div>",
+		  "      ",
+		  "    </div>",
+		  "  )",
+		  "}",
+		  "",
+		  "export default ${TM_DIRECTORY/^.+[\\/\\\\]+(.*)$/$1/};"
+		],
+    "description": "Basic Next Page - version for Windows"
+	},
+	"Basic React FC": {
+		"scope": "javascriptreact,typescriptreact",
+		"prefix": "reactfc",
+		"body": [
+		  "const ${TM_FILENAME_BASE/[\\.-]/_/g} = () => {",
+		  "  return (",
+		  "    <div>",
+		  "      ",
+		  "    </div>",
+		  "  )",
+		  "}",
+		  "",
+		  "export {${TM_FILENAME_BASE/[\\.-]/_/g}};"
+		],
+	},
+	"Basic Hook": {
+		"scope": "typescript,javascript,javascriptreact,typescriptreact",
+		"prefix": "hook",
+		"body": [
+		  "const ${TM_FILENAME_BASE/(.*)/${1:/camelcase}/} = () => {",
+				"  ",
+				"  return [];",
+				"};",
+				"",
+				"export { ${TM_FILENAME_BASE/(.*)/${1:/camelcase}/} };",
+				""
+		],
+		"description": "Basic Hook"
+	},
+	"Create Dispatch from Hook": {
+		"scope": "typescript,javascript,javascriptreact,typescriptreact",
+		"prefix": "dispatch",
+		"body": [
+		  "const dispatch = useDispatch();"
+		],
+		"description": "Create Dispatch from Hook"
+	},
+	"Create state pair with useState": {
+		"scope": "typescript,javascript,javascriptreact,typescriptreact",
+		"prefix": "state",
+		"body": [
+		  "const [${1:name}, set${1/(.)/${1:/capitalize}/}] = useState($2);"
+		],
+		"description": "Create state pair with useState"
+	},
+	"Create effect with UseEffect": {
+		"scope": "typescript,javascript,javascriptreact,typescriptreact",
+		"prefix": "effect",
+		"body": [
+		  "useEffect(() => {$1}, [$2]);"
+		],
+		"description": "Create effect with UseEffect"
+	},
+	"Create Test Case": {
+		"scope": "typescript,javascript,javascriptreact,typescriptreact",
+		"prefix": "should",
+		"body": [
+		  "it('should $1', () => {$2});"
+		],
+		"description": "Create Test Case"
+	},
+	"Create Async Test Case": {
+		"scope": "typescript,javascript,javascriptreact,typescriptreact",
+		"prefix": "shoulda",
+		"body": [
+		  "it('should $1', async () => {$2});"
+		],
+		"description": "Create Async Test Case"
+	},
+	"Re-export component via facade": {
+		"scope": "typescript,javascript",
+		"prefix": "reexport",
+		"body": [
+			"export { ${CLIPBOARD} } from './${CLIPBOARD}';",
+			""
+		],
+		"description": "Re-export component via facade"
+	}
+}
